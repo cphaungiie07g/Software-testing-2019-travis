@@ -109,7 +109,7 @@ public class TestDeposit {
 		
 		int salary = 100000;
 		double interestRate=0.01;
-		double expected = (salary * Math.pow(1 + interestRate, 10));
+		double expected = (salary * Math.pow(1 + interestRate, 4));
 		
 		when(userA.depositAmount()).thenReturn(salary);
 		when(userA.depositInterest(anyInt())).thenReturn(interestRate);

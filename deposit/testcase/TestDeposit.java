@@ -36,7 +36,7 @@ public class TestDeposit {
 		// 固定利率:3%
 		int salary = 198178;
 		double interestRate=0.03;
-		double expected = (198178 * Math.pow(1 + interestRate), (1989-1949));
+		double expected = (198178 * Math.pow(1 + interestRate), int (1989-1949));
 
 		when(userA.depositAmount()).thenReturn(198178);
 		when(userA.depositInterest(anyDouble())).thenReturn(0.03);
@@ -54,7 +54,7 @@ public class TestDeposit {
 		// 利率都是5%
 		int salary = 18000;
 		double interestRate=0.05;
-		double expected = (salary * Math.pow(1 + interestRate), (1994-1974));
+		double expected = (salary * Math.pow(1 + interestRate), int (1994-1974));
 				   
 		when(userA.depositAmount()).thenReturn(salary);
 		when(userA.depositInterest(anyDouble())).thenReturn(interestRate);
@@ -72,6 +72,7 @@ public class TestDeposit {
 		// 利率都是10%
 		int salary = 40000;
 		double interestRate=0.1;
+		double expected = (salary * Math.pow(1 + interestRate), int (1945-1937));
 		
 		when(userA.depositAmount()).thenReturn(salary);
 		when(userA.depositInterest(anyDouble())).thenReturn(interestRate);

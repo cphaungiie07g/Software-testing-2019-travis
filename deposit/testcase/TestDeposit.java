@@ -86,7 +86,7 @@ public class TestDeposit {
 		//assertEquals("昭和20年:" + (int) expected, result);
 	}
 	
-	@Test
+	/*@Test
 	public void testInputErrorYear() {
 		
 		int salary = 10000;
@@ -102,5 +102,5 @@ public class TestDeposit {
 		String result = deposit.deposit(userA);
 		assertEquals("昭和20年: 11000", result);
 		//assertEquals("昭和20年:" + (int) expected, result);
-	}
+	}*/
 }

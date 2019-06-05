@@ -103,4 +103,22 @@ public class TestDeposit {
 		assertEquals("平成22年: 11000", result);
 		//assertEquals("昭和20年:" + (int) expected, result);
 	}
+	
+	@Test
+	public void test2019To2023() {
+		
+		int salary = 100000;
+		double interestRate=0.01;
+		double expected = (salary * Math.pow(1 + interestRate, 10));
+		
+		when(userA.depositAmount()).thenReturn(salary);
+		when(userA.depositInterest(anyInt())).thenReturn(interestRate);
+		when(userA.expireEra()).thenReturn("令和");
+		when(userA.expireYear()).thenReturn(4);
+
+		Deposit deposit = new Deposit(2019);
+		String result = deposit.deposit(userA);
+		assertEquals("令和4年: 104000", result);
+		//assertEquals("昭和20年:" + (int) expected, result);
+	}
 }

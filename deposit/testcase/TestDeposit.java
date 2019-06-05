@@ -39,7 +39,7 @@ public class TestDeposit {
 		double expected = (198178 * Math.pow(1 + interestRate, 40));
 		
 		when(userA.depositAmount()).thenReturn(198178);
-		when(userA.depositInterest(anyDouble())).thenReturn(0.03);
+		when(userA.depositInterest(anyInt())).thenReturn(0.03);
 		when(userA.expireEra()).thenReturn("昭和");
 		when(userA.expireYear()).thenReturn(24);
 
@@ -57,7 +57,7 @@ public class TestDeposit {
 		double expected = (salary * Math.pow(1 + interestRate, 20));
 				   
 		when(userA.depositAmount()).thenReturn(salary);
-		when(userA.depositInterest(anyDouble())).thenReturn(interestRate);
+		when(userA.depositInterest(anyInt())).thenReturn(interestRate);
 		when(userA.expireEra()).thenReturn("昭和");
 		when(userA.expireYear()).thenReturn(49);
 
@@ -76,7 +76,7 @@ public class TestDeposit {
 		double expected = (salary * Math.pow(1 + interestRate, 8));
 		
 		when(userA.depositAmount()).thenReturn(salary);
-		when(userA.depositInterest(anyDouble())).thenReturn(interestRate);
+		when(userA.depositInterest(anyInt())).thenReturn(interestRate);
 		when(userA.expireEra()).thenReturn("昭和");
 		when(userA.expireYear()).thenReturn(20);
 

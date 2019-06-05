@@ -74,7 +74,7 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 
-	//@Test
+	@Test
 	public void testMultiplicationThreeNumberArrayList() {
 		// Test three number multiplications
 		// Here should init prepared answer
@@ -102,7 +102,7 @@ public class TestMultiplication {
 	public void testMultiplicationOneNumberArrayList() {
 		// Test one number multiplications, complete test coverage to 100%
 		// Here should init prepared answer
-
+		int a = 11;
 		int expectedANS = 11;
 
 		// Here should new Factorization object with Mockito stub

@@ -82,7 +82,7 @@ public class TestDeposit {
 
 		Deposit deposit = new Deposit(1937);
 		String result = deposit.deposit(userA);
-		assertEquals("昭和20年": 85743", result);
+		assertEquals("昭和20年: 85743", result);
 		//assertEquals("昭和20年:" + (int) expected, result);
 	}
 }

@@ -86,8 +86,8 @@ public class TestDeposit {
 		//assertEquals("昭和20年:" + (int) expected, result);
 	}
 	
-	/*@Test
-	public void testInputErrorYear() {
+	@Test
+	public void test2010To2020() {
 		
 		int salary = 10000;
 		double interestRate=0.1;
@@ -95,12 +95,12 @@ public class TestDeposit {
 		
 		when(userA.depositAmount()).thenReturn(salary);
 		when(userA.depositInterest(anyInt())).thenReturn(interestRate);
-		when(userA.expireEra()).thenReturn("昭和");
-		when(userA.expireYear()).thenReturn(10);
+		when(userA.expireEra()).thenReturn("平成");
+		when(userA.expireYear()).thenReturn(22);
 
-		Deposit deposit = new Deposit(1989);
+		Deposit deposit = new Deposit(2010);
 		String result = deposit.deposit(userA);
-		assertEquals("昭和20年: 11000", result);
+		assertEquals("平成22年: 11000", result);
 		//assertEquals("昭和20年:" + (int) expected, result);
-	}*/
+	}
 }
